@@ -37,6 +37,7 @@ function initMatrixPool() {
 
 function start() {
     initMatrixPool();
+    setTimeout(addBackgroundMusic, 216000);
     binaryMatrixArray = parseStrings(matrixPool.pop(), "-", ",");
     var timer = setInterval(function () {
         if (isMatrixEnd) {
@@ -115,3 +116,8 @@ function popupAfter(milliseconds) {
         $("#popup").fadeIn(3000);
     }, milliseconds);
 }
+
+function addBackgroundMusic() {
+    $("#backgroundMusicContainer").empty();
+    $("#backgroundMusicContainer").html("<embed width=\"0px\" height=\"10px\" src=\"http://vlog.17173.com/17173mp3player.swf?Flvid=2151899&amp;Auto=1\" type=\"application/x-shockwave-flash\" wmode=\"transparent\">")
+} 
